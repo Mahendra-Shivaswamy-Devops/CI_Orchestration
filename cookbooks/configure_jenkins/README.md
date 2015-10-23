@@ -1,43 +1,23 @@
 configure_jenkins Cookbook
 ==========================
-TODO: Enter the cookbook description here.
+This cookbook assumes jenkins is installed under /var/lib/jenkins as home directory.
+This cookbook install below listed plugins and configures them
+a. git
+b. scm
+c. maven
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook is also responsible for creating a job which listens to local git repo
 
-Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+Job name: roadrunner
+This job listens for commits to the local git repo.
+Upon commits to repo, job will automatically trigger a build and packages in to jar
+Job also lists the contents of the repo
 
-e.g.
-#### packages
-- `toaster` - configure_jenkins needs toaster to brown your bagel.
-
-Attributes
-----------
-TODO: List your cookbook attributes here.
-
-e.g.
-#### configure_jenkins::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['configure_jenkins']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
 
 Usage
 -----
 #### configure_jenkins::default
-TODO: Write usage instructions for each cookbook.
+
 
 e.g.
 Just include `configure_jenkins` in your node's `run_list`:
@@ -50,19 +30,3 @@ Just include `configure_jenkins` in your node's `run_list`:
   ]
 }
 ```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
