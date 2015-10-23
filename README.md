@@ -32,7 +32,9 @@ Do not use this script if you already have these setup.
 just run below commands
 
 git clone https://github.com/Mahendra-Shivaswamy-Devops/CI_Orchestration.git
+
 cd CI_*
+
 vagrant up --provision
 
 ------------------------------------------------------------------------------------------------
