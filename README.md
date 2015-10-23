@@ -35,11 +35,28 @@ git clone https://github.com/Mahendra-Shivaswamy-Devops/CI_Orchestration.git
 cd CI_*
 vagrant up --provision
 
-------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
+install_jenkins Cookbook
 
+This cookbook install jenkins on debian and rhel based platfroms. This cookbbok runs jenkins on 8080 port.
+Jenkins by default doesnot have login credentials, so anyone with IP and port combination can access jenkins.
 
+-----------------------------------------------------------------------------------------------
+configure_jenkins cookbook
 
+This cookbook assumes jenkins is installed under /var/lib/jenkins as home directory. This cookbook install below listed plugins and configures them a. git b. scm c. maven
+
+This cookbook is also responsible for creating a job which listens to local git repo
+
+Job name: roadrunner This job listens for commits to the local git repo. Upon commits to repo, job will automatically trigger a build and packages in to jar Job also lists the contents of the repo
+
+ A sample cassandra application is used to demonstrate the build process.
+ https://github.com/rlab-mahendra/cassandra_app.git
+ 
+ Jenkins will listen to file::///home/cassandra_app
+ 
+ ---------------------------------------------------------------------------------------------------
 
 
 
