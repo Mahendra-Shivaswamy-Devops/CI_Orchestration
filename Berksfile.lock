@@ -1,0 +1,30 @@
+DEPENDENCIES
+  apt
+  configure_jenkins
+    path: cookbooks/configure_jenkins
+  install_jenkins
+    path: cookbooks/install_jenkins
+  yum
+    git: git://github.com/opscode-cookbooks/yum.git
+    revision: 2fce8f58256738d3776dc203326a43f1335fa190
+
+GRAPH
+  apt (2.8.2)
+  build-essential (2.2.4)
+  chef_handler (1.2.0)
+  configure_jenkins (0.1.0)
+    git (>= 0.0.0)
+  dmg (2.3.0)
+  git (4.3.4)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  install_jenkins (0.1.0)
+    apt (~> 2.0)
+    yum (~> 3.0)
+  windows (1.38.2)
+    chef_handler (>= 0.0.0)
+  yum (3.8.1)
+  yum-epel (0.6.3)
+    yum (~> 3.2)
